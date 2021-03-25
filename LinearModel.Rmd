@@ -54,3 +54,11 @@ cor(SIMS~ARM,data=data)
 model.1 <- lm(SIMS~ARM,data=data)
 summary.lm(model.1)
 ```
+
+# now add the model fit to our plot
+  
+```{r}
+basicNN + geom_point() + geom_smooth(method=lm)
+``` 
+
+The equation for SIMS is explained by ARM is SIMS = -4.1+.0545*ARM.
