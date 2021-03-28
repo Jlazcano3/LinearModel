@@ -96,4 +96,15 @@ basicGG + geom_point() + geom_smooth(method=lm)
 
 The equation for SIMS is explained by GRIP is SIMS = -4.18+.0545*GRIP.
 
+# Inferential  (Build linear model)
+  
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP,data=data)
+summary.lm(model.3)
+```
+
+SIMS=-5.43+0.037 * ARM+0.024 * GRIP
+
+
+
 
