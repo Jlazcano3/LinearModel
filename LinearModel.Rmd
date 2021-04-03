@@ -132,7 +132,8 @@ SIMS=-5.43+0.037 * ARM+0.024 * GRIP
 
 ```{r}
 anova(model.1,model.3)
+predict(model.3,newdata,interavl="prediction")
 ```
 
-
+The anova compares model 1 with model 3, the null hypothesis has no difference in the ability to predict SIMS. The alternative hypothesis is that there is a difference. The p-value is 0.000005 this is so small that the difference in the ability to predict SIMS is not due to chance. The adjusted r squared and standard deviation of the errors both indicate that the ARM+GRIP model is better. The prediction for ARM+GRIP model is 0.15 and the 95% confidence interval is -2.1 to 2.4. 
 
